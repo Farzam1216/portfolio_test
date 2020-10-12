@@ -227,7 +227,7 @@ Services.<br />
 							>We serve small and medium sized companies<br> in all tech related industries with high quality<br> growth services which are presented below
 							</rs-layer><!--
 
-							--><rs-layer
+							--><!-- <rs-layer
 								id="slider-3-slide-3-layer-15"
 								class="button rev-btn"
 								data-type="button"
@@ -246,7 +246,7 @@ Services.<br />
 								data-frame_hover="bgc:#1e1e1e;bor:5px,5px,5px,5px;e:Power1.easeInOut;bri:120%;"
 								style="z-index:23;background:#ff6a5c;font-family: var(--body-font-family);"
 							>Get started
-							</rs-layer><!--
+							</rs-layer> --><!--
 -->						</rs-slide>
 					</rs-slides>
 					<rs-progress class="rs-bottom" style="visibility: hidden !important;"></rs-progress>

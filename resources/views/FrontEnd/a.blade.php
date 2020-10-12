@@ -68,7 +68,7 @@
 							><br><br> is your system integrator solution and application development<br> company   serving their clients since Sept’16. Ever since it’s <br> establishment, the company has achieved an outstanding <br>success in development of mobile applications and e-Learning<br> solutions using the  opensource products.
 							</rs-layer><!--
 
-							--><rs-layer
+							--><!-- <rs-layer
 								id="slider-4-slide-4-layer-13"
 								class="rev-btn"
 								data-type="button"
@@ -85,8 +85,8 @@
 								data-frame_999="o:0;st:w;sR:6480;"
 								data-frame_hover="bgc:#1e1e1e;bor:4px,4px,4px,4px;sp:1000ms;e:Power4.easeInOut;bri:120%;"
 								style="z-index:11;background-color:#5788ff;font-family: var(--body-font-family);"
-							>Read More
-							</rs-layer><!--
+							>
+							</rs-layer> --><!--
 
 							--><rs-layer
 								id="slider-4-slide-4-layer-14"

@@ -60,7 +60,7 @@
 					<div class="col-lg-4">
 						<div class="box-effect no-effect   wow fadeInUp  text-center feature-box-effect" data-wow-delay="0.8s">
 							<div class="icon-box">
-								<div class="img-effect shadow-effect mb-4 circle-image"><img src="images/training.jpg" alt="fancybox"></div>
+								<div class="img-effect shadow-effect mb-4 circle-image"><img src="images/training1.jpg" alt="fancybox"></div>
 								<h5 class="mb-2">TRAINING & SUPPORT</h5>
 								<!-- <p class="mb-0">It is a long established fact that a reader will be distracted</p> -->
 							</div>

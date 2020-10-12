@@ -4,7 +4,10 @@
 	@include('FrontEnd.overview')
     @include('FrontEnd.serviceIlustration')
     @include('FrontEnd.services')
+     @include('FrontEnd.b')
     @include('FrontEnd.about-us')
     @include('FrontEnd.projects-details')
-    @include('FrontEnd.b')
-section
+    @include('FrontEnd.c')
+    @include('FrontEnd.contacts')
+    
+@endsection

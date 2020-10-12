@@ -4,21 +4,31 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Sofbox - Responsive Software Landing Page</title>
+		<title>Intercraftsol</title>
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+		{{-- <link rel="stylesheet" href="css/bootstrap.min.css"> --}}
 		<!-- REVOLUTION STYLE SHEETS -->
-		<link rel="stylesheet"  href="revslider/css/rs6.css">
+		{{-- <link rel="stylesheet"  href="revslider/css/rs6.css"> --}}
 		<!-- Typography CSS -->
 		<link rel="stylesheet" href="css/typography.css">
 		<!-- Style -->
 		<link rel="stylesheet" href="css/sofbox-style.css">
 		<!-- Responsive -->
-		<link rel="stylesheet" href="css/responsive.css">
+		{{-- <link rel="stylesheet" href="css/responsive.css"> --}}
 		<!-- Variable-color -->
         <link rel="stylesheet" href="css/variables/marketing-software-color.css">
+
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+<!-- RTL  -->
+<!-- Bootstrap -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-CKHFSO+alj8INnPTr6aTHcZfWxiUMck+E/gmzluv3nw0QiPeBS2hRjV8ImTZS5Yd" crossorigin="anonymous">
+
+		<script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js" integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k" crossorigin="anonymous"></script> 
+<!-- jquery -->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
 	</head>
 	<body >
@@ -123,41 +133,31 @@
 	<footer id="iq-contact" class="position-relative  footer-two p-0">
 		<div class="container">
 			<div class="row justify-content-center footer-subscribe">
-				<div class="col-lg-8 footer-box">
-					<div class="footer-input">
-						<input type="Email" class="form-control m-0" id="inputEmail" placeholder="Your Email">
-						<a class="button sign-btn org-btn" href="">Sign up</a>
-					</div>
-				</div>
+				
 				<div class="col-lg-12 text-center">
 					<div class="widget footer-logo text-center">
 						<div class="textwidget">
-							<p><img class="alignnone size-full wp-image-2089 m-0" src="images/lead/48.png" alt="img"></p>
+							<p><img class="alignnone size-full wp-image-2089 m-0" src="images/logo.png" width="200px" alt="img"></p>
 						</div>
 					</div>
-					<ul class="info-share org-social d-inline list-inline">
-						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fa fa-github"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
-					</ul>
-					<div class="widget footer-logo text-center">
-						<div class="menu-about-menu-container">
-							<ul id="menu-about-menu" class="menu">
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1616"><a href="#">About us</a></li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1625"><a href="#">Our services</a></li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a href="#">About us</a></li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a href="#">Careers</a></li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a href="#">Team</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="widget footer-logo text-center">
+					
+					
+					<!-- <div class="widget footer-logo text-center">
 						<div class="textwidget">
 							<p>Copyright 2019 sofbox All Rights Reserved.</p>
 						</div>
-					</div>
+					</div> -->
+	
 				</div>
+								<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176826469-2"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-176826469-2');
+</script>
 			</div>
 		</div>
 		<!-- back-to-top -->
@@ -176,6 +176,10 @@
 	<script src="js/popper.min.js"></script>
 	<!--  bootstrap -->
 	<script src="js/bootstrap.min.js" ></script>
+
+
+	{{-- app.js --}}
+  
 	<!-- Appear JavaScript -->
 	<script src="js/appear.js"></script>
 	<!-- Circle Progress -->
@@ -221,6 +225,36 @@
 		revslider_showDoubleJqueryError("#rev_slider_3_2");
 	}else{
 		revapi3 = tp("#rev_slider_3_2").show().revolution({
+			jsFileLocation:"js/",
+			sliderLayout:"fullwidth",
+			visibilityLevels:"1240,1024,778,480",
+			gridwidth:"1240,1024,778,480",
+			gridheight:"800,768,500,500",
+			minHeight:"",
+			spinner:"spinner0",
+			editorheight:"900,768,500,500",
+			responsiveLevels:"1240,1024,778,480",
+			disableProgressBar:"on",
+			navigation: {
+				onHoverStop:false
+			},
+			fallbacks: {
+				allowHTML5AutoPlayOnAndroid:true
+			},
+		});
+	}
+	});
+	</script>
+
+		<script>
+	var	revapi3,
+	tp;
+	jQuery(function() {
+	tp = jQuery;
+	if(tp("#rev_slider_3_5").revolution == undefined){
+		revslider_showDoubleJqueryError("#rev_slider_3_5");
+	}else{
+		revapi3 = tp("#rev_slider_3_5").show().revolution({
 			jsFileLocation:"js/",
 			sliderLayout:"fullwidth",
 			visibilityLevels:"1240,1024,778,480",
@@ -319,6 +353,17 @@
 
 					});
 				</script>
+
+
+					 <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176826469-2"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-176826469-2');
+</script> 
 
 				<!-- chatboot script -->
 				<!-- <script>
