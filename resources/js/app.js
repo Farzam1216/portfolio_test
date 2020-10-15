@@ -32,3 +32,4 @@ Vue.component('contacts-component', require('./components/contacts.vue').default
 const app = new Vue({
     el: '#app',
 });
+

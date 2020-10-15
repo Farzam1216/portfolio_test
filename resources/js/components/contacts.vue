@@ -8,24 +8,30 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-12 col-sm-12 iq-mtb-15">
                             <h4 class="heading-left title text-black">Get in Touch</h4>
-                            <form id="contact" method="post">
+                            <form @submit.prevent="submit" id="contact" method="post" action="#">
                                 <div class="contact-form">
                                     <div class="section-field iq-mt-10">
-                                        <input class="require" id="contact_name" type="text" placeholder="Name*" name="name"><br>
+                                        <input class="require" id="contact_name" type="text" placeholder="Name*" name="name" v-model="fields.name"><br>
+                                        <div v-if="errors && errors.name" class="text-danger">{{ errors.name[0] }}</div>
+                                    
                                     </div>
                                     <div class="section-field iq-mt-10">
-                                        <input class="require" id="contact_email" type="email" placeholder="Email*" name="email"><br>
+                                        <input class="require" id="contact_email" type="email" placeholder="Email*" name="email" v-model="fields.email"><br>
+                                        <div v-if="errors && errors.email" class="text-danger">{{ errors.email[0] }}</div>
                                     </div>
                                     <div class="section-field iq-mt-10">
-                                        <input class="require" id="contact_phone" type="text" placeholder="Phone*" name="phone"><br>
+                                        <input class="require" id="contact_phone" type="text" placeholder="Phone*" name="phone" v-model="fields.phone"><br>
+                                        <div v-if="errors && errors.message" class="text-danger">{{ errors.phone[0] }}</div>
                                     </div>
                                     <div class="section-field textarea iq-mt-10">
-                                        <textarea id="contact_message" class="input-message require" placeholder="Comment*" rows="5" name="message"></textarea><br>
+                                        <textarea id="contact_message" class="input-message require" placeholder="Comment*" rows="5" name="message" v-model="fields.message"></textarea><br>
+                                        <div v-if="errors && errors.message" class="text-danger">{{ errors.message[0] }}</div>
                                     </div>
-                                    <div class="section-field">
-                                    <div class="g-recaptcha" data-sitekey="6Lc5XV4UAAAAAJzUmGomye9Peru8lXyzT22FH0lX"><br></div>
-                                </div>
-                                    <a  href=""  class="button pull-right iq-mt-20">Send Message</a>
+                                    
+                                
+                                    
+                                    <button type="submit" class="button pull-right iq-mt-20">Send message</button>
+                                    <div v-if="success" class="alert alert-success mt-3">Message sent!</div>
                                     <p role="alert"></p>
                                 </div>
                             </form>
@@ -53,7 +59,7 @@
                                     </div>
                                     <div class="contact-box right media-body">
                                         <h5 class="iq-tw-6">Phone</h5>
-                                        <span class="lead iq-tw-5">+966 505 465 830</span>
+                                        <span class="lead iq-tw-5">+966 505 465 830</span> <br>    
                                         <span class="lead iq-tw-5">+92 336 923 7827</span>
                                         <p class="">Mon-Fri 9:00am - 5:00pm</p>
                                     </div>
@@ -82,10 +88,34 @@
 </template>
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
+  data() {
+    return {
+      fields: {},
+      errors: {},
+      success: false,
+      loaded: true,
     }
+  },
+  methods: {
+    submit() {
+      if (this.loaded) {
+        this.loaded = false;
+        this.success = false;
+        this.errors = {};
+        axios.post('/submit', this.fields).then(response => {
+          this.fields = {}; //Clear input fields.
+          this.loaded = true;
+          this.success = true;
+        }).catch(error => {
+          this.loaded = true;
+          if (error.response.status === 422) {
+            this.errors = error.response.data.errors || {};
+          }
+        });
+      }
+    },
+  },
+}
 </script>
 
  
